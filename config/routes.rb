@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'accounting_entries', to: 'accounting_entries#index'
+  resources :accounting_entries, only: [:index, :create, :show]
 end

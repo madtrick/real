@@ -13,3 +13,5 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'rspec-rails', :group => [:development, :test]
 
 gem 'guard-rspec', :group => [:development, :test]
+
+gem 'acts-as-taggable-on', '~> 3.4'

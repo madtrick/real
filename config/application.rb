@@ -20,6 +20,9 @@ module Real
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.session_store = ActionDispatch::Session::CookieStore
+    config.api_only      = false
+
     config.middleware.use Rack::Cors do
       allow do
         origins '*'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140927210715) do
+ActiveRecord::Schema.define(version: 20140928082856) do
 
   create_table "accounting_entries", force: true do |t|
     t.float    "amount"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140927210715) do
     t.string   "token"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "google_id"
+    t.text     "google_id"
   end
 
 end

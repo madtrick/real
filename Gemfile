@@ -19,3 +19,5 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem 'omniauth-google-oauth2'
 
 gem 'pry'
+
+gem 'figaro'

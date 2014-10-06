@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_filter :filter_email
   skip_before_filter :authenticate
 
   def create
@@ -9,6 +10,10 @@ class SessionsController < ApplicationController
   end
 
   private
+  def filter_email
+    render nothing: true, status: :unauthorized unless Barrier.whitelisted_emails.include? google_oauth2_user_email
+  end
+
   def auth_hash
     request.env.fetch('omniauth.auth')
   end

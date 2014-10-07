@@ -6,7 +6,7 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
-gem 'sqlite3'
+gem 'sqlite3', :group => :development
 
 gem 'rack-cors', require: 'rack/cors'
 
@@ -21,3 +21,7 @@ gem 'omniauth-google-oauth2'
 gem 'pry'
 
 gem 'figaro'
+
+gem 'pg'
+
+gem 'rails_12factor', group: :production

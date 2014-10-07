@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_or_create_by(email: google_oauth2_user_email) do |record|
       record.google_id= google_oauth2_user_id
     end
-    redirect_to "http://localhost:8001/?token=#{user.token}"
+    redirect_to Figaro.env.frontend_redirect_url.gsub ":token", user.token
   end
 
   private

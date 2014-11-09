@@ -26,7 +26,7 @@ module Real
     config.middleware.use Rack::Cors do
       allow do
         origins '*'
-        resource '*', :headers => :any, :methods => [:get, :post, :options]
+        resource '*', :headers => :any, :methods => [:get, :put, :post, :options]
       end
     end
   end

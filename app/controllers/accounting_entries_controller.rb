@@ -15,4 +15,11 @@ class AccountingEntriesController < ApplicationController
 
   def show
   end
+
+  def update
+    @accounting_entry = AccountingEntry.find(params[:id])
+    @accounting_entry.update amount: params[:amount], tag_list: params[:tag_list]
+
+    respond_with @accounting_entry
+  end
 end

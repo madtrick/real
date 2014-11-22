@@ -2,7 +2,7 @@ class RecurrentAccountingEntriesController < ApplicationController
   respond_to :json
 
   def index
-    respond_with RecurrentAccountingEntry.all.to_json(include: [:tags])
+    respond_with RecurrentAccountingEntry.all, include: [:tags]
   end
 
   def create

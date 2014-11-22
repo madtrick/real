@@ -27,3 +27,5 @@ gem 'pg'
 gem 'rails_12factor', group: :production
 
 gem 'thin'
+
+gem 'active_model_serializers', '~> 0.8.0'

@@ -2,7 +2,7 @@ class AccountingEntriesController < ApplicationController
   respond_to :json
 
   def index
-    respond_with AccountingEntry.all.to_json(include: [:user, :tags])
+    respond_with AccountingEntry.all, include: [:user, :tags]
   end
 
   def create

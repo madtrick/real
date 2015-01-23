@@ -6,7 +6,7 @@ class AccountingEntriesController < ApplicationController
   end
 
   def create
-    @accounting_entry = AccountingEntry.new(params.permit(:amount, tag_list: []))
+    @accounting_entry = AccountingEntry.new(params.permit(:amount, :date, tag_list: []))
     @accounting_entry.user = current_user
     @accounting_entry.save!
 
@@ -18,7 +18,7 @@ class AccountingEntriesController < ApplicationController
 
   def update
     @accounting_entry = AccountingEntry.find(params[:id])
-    @accounting_entry.update amount: params[:amount], tag_list: params[:tag_list]
+    @accounting_entry.update amount: params[:amount], date: params[:date], tag_list: params[:tag_list]
 
     respond_with @accounting_entry
   end
